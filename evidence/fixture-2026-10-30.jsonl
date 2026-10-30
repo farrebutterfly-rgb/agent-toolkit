@@ -1,0 +1,60 @@
+{"type":"session","ts":"2026-10-30T04:40:39.134Z","code_rev":"95c6ad6","dataset":"suppliers-v1","node":"v22.23.4","mode":"fixture"}
+{"run_id":"acf41810","seq":1,"ts":"2026-10-30T04:40:39.146Z","type":"run_start","model":"fixture:happy-path","question":"Which ISO 9001 certified supplier in Göteborg has the shortest lead time, and how do I contact it?","max_steps":8,"tools":["search_suppliers","get_supplier","final_answer"]}
+{"run_id":"acf41810","seq":2,"ts":"2026-10-30T04:40:39.146Z","type":"model_turn","step":1,"calls":["search_suppliers"]}
+{"run_id":"acf41810","seq":3,"ts":"2026-10-30T04:40:39.150Z","type":"tool_call","step":1,"call_id":"fx_1","tool":"search_suppliers","args":{"city":"Göteborg"},"ok":true,"duration_ms":3}
+{"run_id":"acf41810","seq":4,"ts":"2026-10-30T04:40:39.150Z","type":"model_turn","step":2,"calls":["get_supplier","get_supplier","get_supplier","get_supplier","get_supplier"]}
+{"run_id":"acf41810","seq":5,"ts":"2026-10-30T04:40:39.187Z","type":"tool_call","step":2,"call_id":"fx_2","tool":"get_supplier","args":{"id":"SUP-001"},"ok":true,"duration_ms":37}
+{"run_id":"acf41810","seq":6,"ts":"2026-10-30T04:40:39.192Z","type":"tool_call","step":2,"call_id":"fx_3","tool":"get_supplier","args":{"id":"SUP-003"},"ok":true,"duration_ms":4}
+{"run_id":"acf41810","seq":7,"ts":"2026-10-30T04:40:39.194Z","type":"tool_call","step":2,"call_id":"fx_4","tool":"get_supplier","args":{"id":"SUP-005"},"ok":true,"duration_ms":2}
+{"run_id":"acf41810","seq":8,"ts":"2026-10-30T04:40:39.196Z","type":"tool_call","step":2,"call_id":"fx_5","tool":"get_supplier","args":{"id":"SUP-007"},"ok":true,"duration_ms":2}
+{"run_id":"acf41810","seq":9,"ts":"2026-10-30T04:40:39.197Z","type":"tool_call","step":2,"call_id":"fx_6","tool":"get_supplier","args":{"id":"SUP-011"},"ok":true,"duration_ms":2}
+{"run_id":"acf41810","seq":10,"ts":"2026-10-30T04:40:39.198Z","type":"model_turn","step":3,"calls":["final_answer"]}
+{"run_id":"acf41810","seq":11,"ts":"2026-10-30T04:40:39.199Z","type":"run_end","status":"completed","steps":3,"tool_calls":6,"tool_errors":0,"answer":{"status":"answered","answer":"Lindholmen Fräs AB (SUP-003) has the shortest lead time among ISO 9001 suppliers in Göteborg: 9 days. Contact: rfq@lindholmen-fras.example.","supplier_ids":["SUP-003"],"evidence_ids":["SUP-003","SUP-001"]}}
+{"run_id":"f3b3ad63","seq":1,"ts":"2026-10-30T04:40:39.202Z","type":"run_start","model":"fixture:bad-calls-then-recover","question":"Which ISO 9001 certified supplier in Göteborg has the shortest lead time, and how do I contact it?","max_steps":8,"tools":["search_suppliers","get_supplier","final_answer"]}
+{"run_id":"f3b3ad63","seq":2,"ts":"2026-10-30T04:40:39.202Z","type":"model_turn","step":1,"calls":["lookup_supplier","search_suppliers","get_supplier"]}
+{"run_id":"f3b3ad63","seq":3,"ts":"2026-10-30T04:40:39.202Z","type":"tool_call","step":1,"call_id":"fx_8","tool":"lookup_supplier","args":{"city":"Göteborg"},"ok":false,"duration_ms":0,"error":{"code":"UNKNOWN_TOOL","tool":"lookup_supplier","message":"no tool named \"lookup_supplier\". Available: search_suppliers, get_supplier","retryable":false}}
+{"run_id":"f3b3ad63","seq":4,"ts":"2026-10-30T04:40:39.203Z","type":"tool_call","step":1,"call_id":"fx_9","tool":"search_suppliers","args":{"limit":5},"ok":false,"duration_ms":1,"error":{"code":"INVALID_ARGUMENTS","tool":"search_suppliers","message":"arguments did not match the input schema","retryable":false,"issues":[{"path":"(root)","message":"Give at least one of query, city or category"}]}}
+{"run_id":"f3b3ad63","seq":5,"ts":"2026-10-30T04:40:39.203Z","type":"tool_call","step":1,"call_id":"fx_10","tool":"get_supplier","args":{"id":"3"},"ok":false,"duration_ms":0,"error":{"code":"INVALID_ARGUMENTS","tool":"get_supplier","message":"arguments did not match the input schema","retryable":false,"issues":[{"path":"id","message":"id looks like SUP-001"}]}}
+{"run_id":"f3b3ad63","seq":6,"ts":"2026-10-30T04:40:39.203Z","type":"model_turn","step":2,"calls":["search_suppliers"]}
+{"run_id":"f3b3ad63","seq":7,"ts":"2026-10-30T04:40:39.204Z","type":"tool_call","step":2,"call_id":"fx_11","tool":"search_suppliers","args":{"city":"Göteborg"},"ok":true,"duration_ms":0}
+{"run_id":"f3b3ad63","seq":8,"ts":"2026-10-30T04:40:39.204Z","type":"model_turn","step":3,"calls":["get_supplier","get_supplier","get_supplier","get_supplier","get_supplier"]}
+{"run_id":"f3b3ad63","seq":9,"ts":"2026-10-30T04:40:39.209Z","type":"tool_call","step":3,"call_id":"fx_12","tool":"get_supplier","args":{"id":"SUP-001"},"ok":true,"duration_ms":5}
+{"run_id":"f3b3ad63","seq":10,"ts":"2026-10-30T04:40:39.211Z","type":"tool_call","step":3,"call_id":"fx_13","tool":"get_supplier","args":{"id":"SUP-003"},"ok":true,"duration_ms":2}
+{"run_id":"f3b3ad63","seq":11,"ts":"2026-10-30T04:40:39.213Z","type":"tool_call","step":3,"call_id":"fx_14","tool":"get_supplier","args":{"id":"SUP-005"},"ok":true,"duration_ms":1}
+{"run_id":"f3b3ad63","seq":12,"ts":"2026-10-30T04:40:39.216Z","type":"tool_call","step":3,"call_id":"fx_15","tool":"get_supplier","args":{"id":"SUP-007"},"ok":true,"duration_ms":3}
+{"run_id":"f3b3ad63","seq":13,"ts":"2026-10-30T04:40:39.217Z","type":"tool_call","step":3,"call_id":"fx_16","tool":"get_supplier","args":{"id":"SUP-011"},"ok":true,"duration_ms":2}
+{"run_id":"f3b3ad63","seq":14,"ts":"2026-10-30T04:40:39.218Z","type":"model_turn","step":4,"calls":["final_answer"]}
+{"run_id":"f3b3ad63","seq":15,"ts":"2026-10-30T04:40:39.218Z","type":"run_end","status":"completed","steps":4,"tool_calls":9,"tool_errors":3,"answer":{"status":"answered","answer":"Lindholmen Fräs AB (SUP-003) has the shortest lead time among ISO 9001 suppliers in Göteborg: 9 days. Contact: rfq@lindholmen-fras.example.","supplier_ids":["SUP-003"],"evidence_ids":["SUP-003","SUP-001"]}}
+{"run_id":"8b2ee5bb","seq":1,"ts":"2026-10-30T04:40:39.219Z","type":"run_start","model":"fixture:upstream-timeout","question":"What is the lead time for SUP-003?","max_steps":8,"tools":["search_suppliers","get_supplier","final_answer"]}
+{"run_id":"8b2ee5bb","seq":2,"ts":"2026-10-30T04:40:39.219Z","type":"model_turn","step":1,"calls":["get_supplier"]}
+{"run_id":"8b2ee5bb","seq":3,"ts":"2026-10-30T04:40:39.522Z","type":"tool_call","step":1,"call_id":"fx_18","tool":"get_supplier","args":{"id":"SUP-003"},"ok":false,"duration_ms":303,"error":{"code":"TIMEOUT","tool":"get_supplier","message":"no result within 300 ms","retryable":true}}
+{"run_id":"8b2ee5bb","seq":4,"ts":"2026-10-30T04:40:39.522Z","type":"model_turn","step":2,"calls":["get_supplier"]}
+{"run_id":"8b2ee5bb","seq":5,"ts":"2026-10-30T04:40:39.824Z","type":"tool_call","step":2,"call_id":"fx_19","tool":"get_supplier","args":{"id":"SUP-003"},"ok":false,"duration_ms":302,"error":{"code":"TIMEOUT","tool":"get_supplier","message":"no result within 300 ms","retryable":true}}
+{"run_id":"8b2ee5bb","seq":6,"ts":"2026-10-30T04:40:39.825Z","type":"model_turn","step":3,"calls":["final_answer"]}
+{"run_id":"8b2ee5bb","seq":7,"ts":"2026-10-30T04:40:39.825Z","type":"run_end","status":"completed","steps":3,"tool_calls":2,"tool_errors":2,"answer":{"status":"insufficient_evidence","answer":"The record service did not answer for SUP-003 within the timeout, twice. Lead time is unknown.","supplier_ids":["SUP-003"],"evidence_ids":[]}}
+{"run_id":"5ac3b6be","seq":1,"ts":"2026-10-30T04:40:39.826Z","type":"run_start","model":"fixture:no-evidence","question":"Which supplier in Kiruna can deliver castings?","max_steps":8,"tools":["search_suppliers","get_supplier","final_answer"]}
+{"run_id":"5ac3b6be","seq":2,"ts":"2026-10-30T04:40:39.826Z","type":"model_turn","step":1,"calls":["search_suppliers"]}
+{"run_id":"5ac3b6be","seq":3,"ts":"2026-10-30T04:40:39.826Z","type":"tool_call","step":1,"call_id":"fx_21","tool":"search_suppliers","args":{"city":"Kiruna"},"ok":true,"duration_ms":0}
+{"run_id":"5ac3b6be","seq":4,"ts":"2026-10-30T04:40:39.826Z","type":"model_turn","step":2,"calls":["final_answer"]}
+{"run_id":"5ac3b6be","seq":5,"ts":"2026-10-30T04:40:39.827Z","type":"run_end","status":"completed","steps":2,"tool_calls":1,"tool_errors":0,"answer":{"status":"insufficient_evidence","answer":"The catalogue has no supplier in Kiruna, so I cannot name one.","supplier_ids":[],"evidence_ids":[]}}
+{"run_id":"ae63e848","seq":1,"ts":"2026-10-30T04:40:39.828Z","type":"run_start","model":"fixture:ungrounded-final-rejected","question":"What is the lead time for Mölndal Precision AB?","max_steps":8,"tools":["search_suppliers","get_supplier","final_answer"]}
+{"run_id":"ae63e848","seq":2,"ts":"2026-10-30T04:40:39.828Z","type":"model_turn","step":1,"calls":["search_suppliers"]}
+{"run_id":"ae63e848","seq":3,"ts":"2026-10-30T04:40:39.828Z","type":"tool_call","step":1,"call_id":"fx_23","tool":"search_suppliers","args":{"query":"Mölndal"},"ok":true,"duration_ms":0}
+{"run_id":"ae63e848","seq":4,"ts":"2026-10-30T04:40:39.828Z","type":"model_turn","step":2,"calls":["final_answer"]}
+{"run_id":"ae63e848","seq":5,"ts":"2026-10-30T04:40:39.828Z","type":"final_rejected","step":2,"args":{"status":"answered","answer":"About 6 days.","supplier_ids":["SUP-009"],"evidence_ids":["SUP-009"]},"reason":"SUP-009 was never fetched in this run"}
+{"run_id":"ae63e848","seq":6,"ts":"2026-10-30T04:40:39.828Z","type":"model_turn","step":3,"calls":["get_supplier"]}
+{"run_id":"ae63e848","seq":7,"ts":"2026-10-30T04:40:39.831Z","type":"tool_call","step":3,"call_id":"fx_25","tool":"get_supplier","args":{"id":"SUP-009"},"ok":true,"duration_ms":3}
+{"run_id":"ae63e848","seq":8,"ts":"2026-10-30T04:40:39.831Z","type":"model_turn","step":4,"calls":["final_answer"]}
+{"run_id":"ae63e848","seq":9,"ts":"2026-10-30T04:40:39.831Z","type":"run_end","status":"completed","steps":4,"tool_calls":2,"tool_errors":0,"answer":{"status":"answered","answer":"Mölndal Precision AB quotes 6 days lead time.","supplier_ids":["SUP-009"],"evidence_ids":["SUP-009"]}}
+{"run_id":"01d20809","seq":1,"ts":"2026-10-30T04:40:39.832Z","type":"run_start","model":"fixture:runaway-loop","question":"Which ISO 9001 certified supplier in Göteborg has the shortest lead time, and how do I contact it?","max_steps":5,"tools":["search_suppliers","get_supplier","final_answer"]}
+{"run_id":"01d20809","seq":2,"ts":"2026-10-30T04:40:39.832Z","type":"model_turn","step":1,"calls":["search_suppliers"]}
+{"run_id":"01d20809","seq":3,"ts":"2026-10-30T04:40:39.833Z","type":"tool_call","step":1,"call_id":"fx_27","tool":"search_suppliers","args":{"city":"Göteborg"},"ok":true,"duration_ms":0}
+{"run_id":"01d20809","seq":4,"ts":"2026-10-30T04:40:39.833Z","type":"model_turn","step":2,"calls":["search_suppliers"]}
+{"run_id":"01d20809","seq":5,"ts":"2026-10-30T04:40:39.833Z","type":"tool_call","step":2,"call_id":"fx_28","tool":"search_suppliers","args":{"city":"Göteborg"},"ok":true,"duration_ms":0}
+{"run_id":"01d20809","seq":6,"ts":"2026-10-30T04:40:39.833Z","type":"model_turn","step":3,"calls":["search_suppliers"]}
+{"run_id":"01d20809","seq":7,"ts":"2026-10-30T04:40:39.833Z","type":"tool_call","step":3,"call_id":"fx_29","tool":"search_suppliers","args":{"city":"Göteborg"},"ok":true,"duration_ms":0}
+{"run_id":"01d20809","seq":8,"ts":"2026-10-30T04:40:39.833Z","type":"model_turn","step":4,"calls":["search_suppliers"]}
+{"run_id":"01d20809","seq":9,"ts":"2026-10-30T04:40:39.833Z","type":"tool_call","step":4,"call_id":"fx_30","tool":"search_suppliers","args":{"city":"Göteborg"},"ok":true,"duration_ms":0}
+{"run_id":"01d20809","seq":10,"ts":"2026-10-30T04:40:39.833Z","type":"model_turn","step":5,"calls":["search_suppliers"]}
+{"run_id":"01d20809","seq":11,"ts":"2026-10-30T04:40:39.833Z","type":"tool_call","step":5,"call_id":"fx_31","tool":"search_suppliers","args":{"city":"Göteborg"},"ok":true,"duration_ms":0}
+{"run_id":"01d20809","seq":12,"ts":"2026-10-30T04:40:39.833Z","type":"run_end","status":"step_limit_exceeded","steps":5,"tool_calls":5,"tool_errors":0}
