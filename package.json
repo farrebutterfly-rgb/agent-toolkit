@@ -1,0 +1,23 @@
+{
+  "name": "agent-toolkit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A small TypeScript agent with schema-validated tool calls, an HTTP integration and tested failure behaviour.",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "demo": "tsx src/cli/demo.ts",
+    "live": "tsx src/cli/live.ts",
+    "test": "node --import tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "1.3.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3"
+  }
+}

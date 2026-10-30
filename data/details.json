@@ -1,0 +1,151 @@
+{
+  "version": "suppliers-v1",
+  "records": {
+    "SUP-001": {
+      "id": "SUP-001",
+      "name": "Norrfors Plåt AB",
+      "city": "Göteborg",
+      "category": "sheet-metal",
+      "certifications": [
+        "ISO 9001"
+      ],
+      "lead_time_days": 12,
+      "contact_email": "order@norrfors.example",
+      "updated": "2026-10-01"
+    },
+    "SUP-002": {
+      "id": "SUP-002",
+      "name": "Kvarnby Elektronik AB",
+      "city": "Malmö",
+      "category": "electronics",
+      "certifications": [
+        "ISO 9001",
+        "ISO 14001"
+      ],
+      "lead_time_days": 21,
+      "contact_email": "sales@kvarnby.example",
+      "updated": "2026-10-01"
+    },
+    "SUP-003": {
+      "id": "SUP-003",
+      "name": "Lindholmen Fräs AB",
+      "city": "Göteborg",
+      "category": "machining",
+      "certifications": [
+        "ISO 9001",
+        "ISO 14001"
+      ],
+      "lead_time_days": 9,
+      "contact_email": "rfq@lindholmen-fras.example",
+      "updated": "2026-10-01"
+    },
+    "SUP-004": {
+      "id": "SUP-004",
+      "name": "Sävsjö Kabel AB",
+      "city": "Sävsjö",
+      "category": "cables",
+      "certifications": [
+        "ISO 9001"
+      ],
+      "lead_time_days": 15,
+      "contact_email": "info@savsjokabel.example",
+      "updated": "2026-10-01"
+    },
+    "SUP-005": {
+      "id": "SUP-005",
+      "name": "Hisingen Gjuteri AB",
+      "city": "Göteborg",
+      "category": "casting",
+      "certifications": [],
+      "lead_time_days": 30,
+      "contact_email": "kontakt@hisingen-gjuteri.example",
+      "updated": "2026-10-01"
+    },
+    "SUP-006": {
+      "id": "SUP-006",
+      "name": "Ulvsunda Kretskort AB",
+      "city": "Stockholm",
+      "category": "electronics",
+      "certifications": [
+        "ISO 9001",
+        "IATF 16949"
+      ],
+      "lead_time_days": 18,
+      "contact_email": "pcb@ulvsunda.example",
+      "updated": "2026-10-01"
+    },
+    "SUP-007": {
+      "id": "SUP-007",
+      "name": "Torslanda Svets AB",
+      "city": "Göteborg",
+      "category": "welding",
+      "certifications": [
+        "ISO 3834"
+      ],
+      "lead_time_days": 7,
+      "contact_email": "svets@torslanda.example",
+      "updated": "2026-10-01"
+    },
+    "SUP-008": {
+      "id": "SUP-008",
+      "name": "Bergslagens Bult AB",
+      "city": "Örebro",
+      "category": "fasteners",
+      "certifications": [
+        "ISO 9001"
+      ],
+      "lead_time_days": 5,
+      "contact_email": "order@bergslagensbult.example",
+      "updated": "2026-10-01"
+    },
+    "SUP-009": {
+      "id": "SUP-009",
+      "name": "Mölndal Precision AB",
+      "city": "Mölndal",
+      "category": "machining",
+      "certifications": [
+        "ISO 9001"
+      ],
+      "lead_time_days": 6,
+      "contact_email": "quote@molndalprecision.example",
+      "updated": "2026-10-01"
+    },
+    "SUP-010": {
+      "id": "SUP-010",
+      "name": "Akalla Sensorteknik AB",
+      "city": "Stockholm",
+      "category": "sensors",
+      "certifications": [
+        "ISO 9001",
+        "ISO 13485"
+      ],
+      "lead_time_days": 25,
+      "contact_email": "hello@akallasensor.example",
+      "updated": "2026-10-01"
+    },
+    "SUP-011": {
+      "id": "SUP-011",
+      "name": "Gamlestaden Lack AB",
+      "city": "Göteborg",
+      "category": "surface-treatment",
+      "certifications": [
+        "ISO 14001"
+      ],
+      "lead_time_days": 10,
+      "contact_email": "lack@gamlestaden.example",
+      "updated": "2026-10-01"
+    },
+    "SUP-012": {
+      "id": "SUP-012",
+      "name": "Luleå Hydraulik AB",
+      "city": "Luleå",
+      "category": "hydraulics",
+      "certifications": [
+        "ISO 9001"
+      ],
+      "lead_time_days": 14,
+      "contact_email": "service@lulea-hydraulik.example",
+      "updated": "2026-10-01"
+    }
+  }
+}

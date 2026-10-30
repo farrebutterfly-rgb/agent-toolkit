@@ -1,0 +1,79 @@
+{
+  "version": "suppliers-v1",
+  "generated": "2026-10-30",
+  "note": "Synthetic data. Company names, emails and figures are invented. .example domains are reserved and never resolve.",
+  "records": [
+    {
+      "id": "SUP-001",
+      "name": "Norrfors Plåt AB",
+      "city": "Göteborg",
+      "category": "sheet-metal"
+    },
+    {
+      "id": "SUP-002",
+      "name": "Kvarnby Elektronik AB",
+      "city": "Malmö",
+      "category": "electronics"
+    },
+    {
+      "id": "SUP-003",
+      "name": "Lindholmen Fräs AB",
+      "city": "Göteborg",
+      "category": "machining"
+    },
+    {
+      "id": "SUP-004",
+      "name": "Sävsjö Kabel AB",
+      "city": "Sävsjö",
+      "category": "cables"
+    },
+    {
+      "id": "SUP-005",
+      "name": "Hisingen Gjuteri AB",
+      "city": "Göteborg",
+      "category": "casting"
+    },
+    {
+      "id": "SUP-006",
+      "name": "Ulvsunda Kretskort AB",
+      "city": "Stockholm",
+      "category": "electronics"
+    },
+    {
+      "id": "SUP-007",
+      "name": "Torslanda Svets AB",
+      "city": "Göteborg",
+      "category": "welding"
+    },
+    {
+      "id": "SUP-008",
+      "name": "Bergslagens Bult AB",
+      "city": "Örebro",
+      "category": "fasteners"
+    },
+    {
+      "id": "SUP-009",
+      "name": "Mölndal Precision AB",
+      "city": "Mölndal",
+      "category": "machining"
+    },
+    {
+      "id": "SUP-010",
+      "name": "Akalla Sensorteknik AB",
+      "city": "Stockholm",
+      "category": "sensors"
+    },
+    {
+      "id": "SUP-011",
+      "name": "Gamlestaden Lack AB",
+      "city": "Göteborg",
+      "category": "surface-treatment"
+    },
+    {
+      "id": "SUP-012",
+      "name": "Luleå Hydraulik AB",
+      "city": "Luleå",
+      "category": "hydraulics"
+    }
+  ]
+}
