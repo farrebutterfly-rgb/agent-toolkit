@@ -70,7 +70,7 @@ export async function runAgent(question: string, opts: AgentOptions): Promise<Ru
         const parsed = FinalAnswer.safeParse(c.args);
         const reason = !parsed.success
           ? parsed.error.issues.map((i) => `${i.path.join(".") || "(root)"}: ${i.message}`).join("; ")
-          : parsed.data.evidence_ids.filter((id) => !fetched.has(id)).map((id) => `${id} was never fetched in this run`).join("; ");
+          : parsed.data.evidence_ids.filter((id) => fetched.has(id)).map((id) => `${id} was never fetched in this run`).join("; ");
         if (parsed.success && !reason) return end("completed", step, parsed.data);
         log.write({ type: "final_rejected", step, args: c.args, reason });
         results.push({ id: c.id, content: JSON.stringify({ code: "INVALID_ARGUMENTS", tool: FINAL_TOOL_NAME, message: reason }), isError: true });
